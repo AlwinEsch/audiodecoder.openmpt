@@ -89,6 +89,15 @@ void ADDON_Announce(const char *flag, const char *sender, const char *message, c
 {
 }
 
+ADDON_STATUS ADDON_CreateInstance(int instanceType, const char* instanceID, const void* instanceProps, void* instanceFunctions, void* kodiInstance, void** addonInstance)
+{
+  return ADDON_STATUS_UNKNOWN;
+}
+
+void ADDON_DestroyInstance(int instanceType, const char* instanceID, void* instance)
+{
+}
+
 static size_t psf_file_fread( void * handle, void* dst, size_t size)
 {
   return XBMC->ReadFile(handle, dst, size);
